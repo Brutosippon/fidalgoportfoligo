@@ -24,7 +24,7 @@ const nodemailer = require("nodemailer");
 // server used to send send emails
 const app = express();
 const path = require('path');
-const port = process.env.PORT || 5000 || 3000;
+const port = process.env.PORT || 5000;
 if (process.env.NODE_ENV === "production") {
   app.use(express.static('build'));
   app.get('*', (req, res) => {
