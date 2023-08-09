@@ -6,7 +6,7 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
       <div className="proj-imgbx">
         <img src={imgUrl} />
         <div className="proj-txtx">
-          <a href="https://www.youtube.com/channel/UCGY6E9EkENikqjguKGNMD6Q"><img alt="" /></a>
+          <a href="https://www.youtube.com/channel/UCGY6E9EkENikqjguKGNMD6Q" target="_blank" rel="noopener noreferrer"><img alt="" /></a>
           <h4>{title}</h4>
           <span>{description}</span>
           

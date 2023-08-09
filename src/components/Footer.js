@@ -16,12 +16,12 @@ export const Footer = () => {
           </Col>
           <Col size={24} sm={12} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="https://www.linkedin.com/in/joao-fidalgo/"><img src={navIcon1} alt="" /></a>
+              <a href="https://www.linkedin.com/in/joao-fidalgo/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="" /></a>
               {/*<a href="#"><img src={navIcon2} alt="" /></a>*/}
-              <a href="https://www.youtube.com/channel/UCGY6E9EkENikqjguKGNMD6Q"><img src={navIcon3} alt="" /></a>
+              <a href="https://www.youtube.com/channel/UCGY6E9EkENikqjguKGNMD6Q" target="_blank" rel="noopener noreferrer"><img src={navIcon3} alt="" /></a>
             </div>
             <p>Copyright 2022. All Rights Reserved João C. Fidalgo</p>
-            <p>Email: fidalgomanagement@gmail.com</p>
+            <p>Email: joaoccfidalgo@gmail.com</p>
           </Col>
         </Row>
       </Container>

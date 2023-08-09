@@ -54,7 +54,8 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projetos</h2>
-                <p>Licenciado em Gestão/Managment, Mestre em Fiscalidade/Tax Managment.</p>
+                <p>Mestre em Tax-Management e Licenciado em Gestão.</p>
+                <p>Pós-Graduado em "Data Science for Finance - NOVA IMS University".</p>
                 <p>No ano 2021, conclui com aproveitamento a formação em CS50x (Computer Science) ministrada pela CS50 Havard University, onde pude aprender conceitos fundamentais de programação como C++, SQL, Python, JS, etc.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
