@@ -57,7 +57,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Bem-vindos ao meu portfólio!</span>
                 <h1>{`Ola! Sou João Fidalgo,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Gestor", "Financeiro", "Judoca" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Atualmente, sou técnico superior do Gabinete de Supervisão de Seguros e Fundos de Pensões e de Gestão do Fundo de Garantia Automóvel (GSF) no Banco de Cabo Verde, organismo que supervisiona a atividade seguradora em Cabo Verde.</p>
+                  <p>Atualmente, sou técnico superior do Gabinete de Supervisão de Seguros e Fundos de Pensões e de Gestão do Fundo de Garantia Automóvel (GSF) no Banco de Cabo Verde, instituição que supervisiona a atividade seguradora em Cabo Verde.</p>
                   {/*<button onClick={() => console.log('connect')}>Entre em contacto <ArrowRightCircle size={15} /></button>*/}
               </div>}
             </TrackVisibility>
