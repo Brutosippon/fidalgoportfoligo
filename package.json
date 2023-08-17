@@ -30,7 +30,7 @@
     "zlib": "^1.0.5",
     "animate.css": "^4.1.1",
     "react-on-screen": "^2.1.1",
-    "@emailjs/browser": "^2.6.3"
+    "@emailjs/browser": "^2.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
