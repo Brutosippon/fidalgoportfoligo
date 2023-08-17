@@ -3,8 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import emailjs from '@emailjs/browser';
-
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -12,59 +10,37 @@ export const Contact = () => {
     lastName: '',
     email: '',
     phone: '',
-    message: '',
-  };
+    message: ''
+  }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Enviar');
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
       setFormDetails({
         ...formDetails,
         [category]: value
-      });
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormDetails((prevDetails) => ({
-      ...prevDetails,
-      [name]: value,
-    }));
-  };
-  //_2ZbqM26LhXF65A4N    (Public Key)
-  //template_rjre6yi     (Template ID)
-  //service_m5tdmm5       (Service ID)
+      })
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-
-    try {
-      const response = await emailjs.sendForm(
-        "service_m5tdmm5",
-        "template_rjre6yi",
-        e.target,
-        "_2ZbqM26LhXF65A4N"
-      );
-
-      setButtonText("Send");
-      if (response.status === 200) {
-        setStatus({ success: true, message: "Message sent successfully" });
-      } else {
-        setStatus({
-          success: false,
-          message: "Something went wrong, please try again later.",
-        });
-      }
-    } catch (error) {
-      setStatus({
-        success: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
-
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("Enviar");
+    let result = await response.json();
     setFormDetails(formInitialDetails);
+    if (result.code === 200) {
+      setStatus({ succes: true, message: 'Message sent successfully'});
+    } else {
+      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+    }
   };
 
   return (
@@ -117,3 +93,4 @@ export const Contact = () => {
     </section>
   )
 }
+
